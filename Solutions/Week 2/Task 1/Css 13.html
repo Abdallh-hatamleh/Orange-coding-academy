@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <style>
+        h3 {
+            background-color: beige;
+            color: red;
+        }
+
+        form {
+            border-left: 10px;
+            border-right: 10px;
+        }
+
+        table,
+        th,
+        td {
+            border: 2px;
+            border-style: solid;
+            border-color: black;
+
+        }
+
+        td {
+            background-color: aqua;
+        }
+
+        th {
+            background-color: beige;
+            color: red;
+        }
+        #a22 {
+            padding: 30px;
+            margin: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <form>
+            <tr>
+                <th colspan=2>
+                    <h3>Personal detalis</h3>
+                </th>
+            </tr>
+            <br>
+            <tr>
+                <td><label for="fname"> First name :</label></td>
+                <td><input type="text" id="fname"></td>
+            </tr>
+            <tr>
+                <td> <label for="pass"> Password : </label>
+                </td>
+                <td> <input type="text" id="pass"></td>
+            </tr>
+            <tr>
+                <td><label for="email"> Email : </label></td>
+                <td> <textarea name="email" id="email"></textarea> </td>
+            </tr>
+            <tr>
+                <td> <label for=""> Select game</label></td>
+                <td>
+                    <input type="checkbox" id="chk1"> <label for="chk1">Hockey</label> <br>
+                    <input type="checkbox" id="chk2"> <label for="chk2">Football</label><br>
+                    <input type="checkbox" id="chk3"> <label for="chk3">Badminton</label><br>
+                    <input type="checkbox" id="chk4"> <label for="chk4">Cricket</label><br>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Gender :</label></td>
+                <td><input type="radio" name="gen" id="mgen">
+                    <label for="mgen" id="gen">Male</label>
+                    <input type="radio" name="gen" id="fgen">
+                    <label for="fgen" id="gen">Female</label>
+                </td>
+            </tr>
+            <tr> 
+                <td><label>Age:</label></td>
+                <td> <select>
+                    <option>Select</option>
+                    <option>10 - 20</option>
+                    <option>20 - 30</option>
+                    <option>30+</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td> <label for="">Select Photo</label></td>
+                <td> <input type="file"></td>
+            </tr>
+            <tr>
+                <td colspan="2"> 
+                    <input type="submit" id="a22" value="Click me">
+                    <input type="reset" id="a22" value="reset">
+                    <input type="submit" id="a22" value="submit form">
+                </td>
+            </tr>
+            
+        </form>
+    </table>
+
+</body>
+
+</html>
