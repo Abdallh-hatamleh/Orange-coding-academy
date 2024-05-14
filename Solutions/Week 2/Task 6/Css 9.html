@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/* .box div {height: 100px; width: 100px;} */
+.Top {background-color: #ff000050;grid-area: 1/1/4/4;}
+.Bottom{background-color: #0000ff50;grid-area: 2/2/5/5;}
+.Middle{background-color: #00ff0050;grid-area: 3/3/6/6;}
+.box{ display: grid; grid-template-columns: repeat(5,1fr); grid-template-rows: repeat(5,1fr); height: 500px;}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="Top">top</div>
+        <div class="Bottom">bottom</div>
+        <div class="Middle">Middle</div> 
+    </div>
+</body>
+</html>

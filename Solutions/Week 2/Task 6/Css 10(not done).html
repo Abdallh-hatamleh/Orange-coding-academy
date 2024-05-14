@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.triangle {
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-bottom: 0;
+  border-top: 20px solid red;
+  grid-area: tro;
+}
+.corcle {background-color: crimson; border-radius: 50%;
+height: 40px; width: 40px;}
+.row-o-corcles {display: flex; grid-area: rcorc;}
+.row-o-corcles .corcle{height: 20px;width: 20px;}
+.this-sure-is-something{display: grid; grid-template-columns: 60px 80px 80px 60px ;
+    grid-template-rows: 60px 80px 100px 30px;height: 500px ; width: 500px;
+grid:
+'corc nam nam tro'
+'par par par par'
+'rec rec rec rec'
+'scru scru scru scru'
+}
+.para {grid-area: nam;}
+.article {grid-area: par;}
+.bigcorcle {grid-area: corc;}
+.scruberscribe{grid-area: scru; display: flex;}
+.scruberscribe div{margin-left: 3px; margin-right: 3px;}
+.Rect{background-color: crimson; grid-area:rec;  color: crimson;}
+   </style>
+</head>
+<body>
+<div class="this-sure-is-something">
+    <div class="corcle bigcorcle"></div>
+    <div class="para">
+    <h3>Arnold Schwarzenegger</h3>
+    <h6>Editor</h6>        
+    </div>
+    <div class="triangle"></div>
+    <div class="Article">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quam consectetur tenetur, eligendi accusamus fugiat, velit fugit esse aut distinctio qui cum voluptatum rerum similique repellat quod doloremque asperiores exercitationem?</div>
+    <div class="Rect"> asdasdfsdfasdf<hr></div>
+    <div class="botrow">
+
+        <div class="scruberscribe">
+            <div>Like</div>
+            <div>Tweet</div>
+            <div>Comment</div>
+        </div>
+        <div class="row-o-corcles">
+            <div class="corcle"></div>
+            <div class="corcle"></div>
+            <div class="corcle"></div>
+            <div class="corcle"></div>
+            <div class="corcle"></div>
+            <div class="corcle"></div>
+        </div>
+    </div>
+</div>    
+</body>
+</html>

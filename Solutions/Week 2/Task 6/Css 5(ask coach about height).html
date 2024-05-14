@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.one{background-color: #0000ff; border-radius: 4%; grid-area: areaA;}
+.two{background-color: #1b1b44; border-radius: 4%;grid-area: areaB;}
+.three{background-color: #b5b5ff; border-radius: 4%;grid-area: areaC;}
+.four{background-color: #b5ffc1; border-radius: 4%;grid-area: areaD;}
+.five{background-color: #b5ffc1; border-radius: 4%;grid-area: areaE;}
+.six{background-color: #f34e78; border-radius: 4%;grid-area: areaf;}
+.griddy { display: grid;
+grid-template-columns: repeat(5, 100px); grid-template-rows:200px 200px 200px; gap: 10px 10px;
+grid: 
+'areaA areaA areaB areaB areaB'
+'areaA areaA areaD areaD areaE'
+'areaC areaC areaD areaD areaf'; height: 600px;
+}
+.greedy div {margin: 1px;}
+
+    </style>
+</head>
+<body>
+    <div class="griddy">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+        <div class="five">5</div>
+        <div class="six">6</div>
+    </div>
+</body>
+</html>
