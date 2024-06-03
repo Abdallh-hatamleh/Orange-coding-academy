@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <form action="">
+    <form action="" style="display: flex;">
         <h1>Task 1</h1>
         <fieldset>
             <legend>Cash flow ratio</legend> <label for="">sample input:</label> <input type="text" id="cash_input1">
@@ -47,20 +47,77 @@
             <p id="answer6">Solutions</p>
         </fieldset>
         <fieldset>
-            <legend>Age limit</legend> <label for="">sample input:</label> <input type="text" id="age_limit">
-            <p id="answer7"></p>
+            <legend>Age limit</legend> <label for="">sample input:</label> <input type="text" id="age">
+            <button onclick="solve()" type="button">Solve</button>
+            <p id="answer7">Solution</p>
         </fieldset>
         <fieldset>
-            <legend>Exponential</legend> <label for="">sample input:</label> <input type="text"> <br> <label
-                for="">sample input:</label> <input type="text">
-            <p id="answer8"></p>
+            <legend>Exponential</legend> <label for="">sample input:</label> <input type="text" id="expo1"> <br> <label
+                for="">sample input:</label> <input type="text" id="expo2">
+                <button onclick="solve()" type="button">Solve</button>
+                <p id="answer8">Solution</p>
         </fieldset>
         <fieldset>
-            <legend>Remainder</legend> <label for="">sample input:</label> <input type="text"> <br> <label for="">sample
-                input:</label> <input type="text">
-            <p id="answer9"></p>
+            <legend>Remainder</legend> <label for="">sample input:</label> <input type="text" id="remainder1"> <br> <label for="">sample
+                input:</label> <input type="text" id="remainder2">
+                <button onclick="solve()" type="button">Solve</button>
+            <p id="answer9">Solution</p>
         </fieldset>
     </form>
+    <form action="" style="display: flex;">
+        <fieldset>
+            <legend>Task 2</legend>
+            <button onclick="Task2()">Click me!</button>
+        </fieldset>
+        <fieldset>
+            <legend>Task 3</legend>
+            <button onclick="Task3()" type="button">Click me!</button>
+        </fieldset>
+        <fieldset>
+            <legend>Task 4</legend>
+            <button onclick="Task4()" type="button">Click me!</button>
+        </fieldset>
+        <fieldset>
+            <legend>Task 5</legend>
+            <button onclick="Task5()" type="button">Click me!</button>
+        </fieldset>
+        <fieldset>
+            <legend>Task 6</legend>
+            <button onclick="Task6()" type="button">Click me!</button>
+        </fieldset>
+        <fieldset>
+            <legend>Task 7</legend> <label for="">a:</label> <input type="text" id="task71">
+            <br> <label for="">b:</label> <input type="text" id="task72">
+            <div style="display: flex;">
+                <button onclick="addition()" type="button">+</button>
+                <button onclick="subtract()" type="button">-</button>
+                <button onclick="multi()" type="button">X</button>
+                <button onclick="division()" type="button">/</button>
+                <button onclick="modulus()" type="button">%</button>
+                <button onclick="pluseq()" type="button">+=</button>
+                <button onclick="minuseq()" type="button">-=</button>
+                <button onclick="timeseq()" type="button">*=</button>
+            </div>
+            <div style="display: flex;">
+                <button onclick="greater()" type="button">&gt;</button>
+                <button onclick="lesser()" type="button">&lt;</button>
+                <button onclick="equalto()" type="button">=</button>
+                <button onclick="unequalto()" type="button">=/=</button>
+                <button onclick="greatereq()" type="button">&gt;=</button> 
+                <button onclick="lesseq()" type="button">&lt;=</button>
+                <button onclick="and()" type="button">AND</button> 
+                <button onclick="or()" type="button">OR</button> 
+                <button onclick="not()" type="button">NOT   </button>  
+            </div>
+            <p id="task7ans">Solution</p>
+        </fieldset>
+        <fieldset>
+            <legend>Task 8</legend>
+            <p id="task8">this isn't right</p>
+        </fieldset>
+    </form>
+
+
     <script src="script.js"></script>
 </body>
 
