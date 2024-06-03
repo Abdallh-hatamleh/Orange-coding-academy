@@ -15,3 +15,13 @@ while(o < 11)
     }
 
 t2.innerHTML = t2.innerHTML.concat(" ", message);
+message = "";
+for(let i = 0;i <11;i++)
+    {
+        if(i%2 == 0)
+            {
+                message= message.concat(" ", i);
+            }
+    }
+let t3 = document.getElementById("t3");
+t3.innerHTML = t3.innerHTML.concat(" ", message);
