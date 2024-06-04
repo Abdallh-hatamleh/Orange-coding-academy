@@ -153,7 +153,7 @@ let gpa = document.getElementById("gpa");
 
 function gpacalc()
 {
-    // console.log("func");
+    console.log("func");
     if (gpa.value > 3.0)
         {
             // console.log("cond");
