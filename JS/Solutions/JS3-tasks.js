@@ -5,7 +5,7 @@
     // }   
     let t1out = document.getElementById("t1out");
     function sayhello(x) {
-        y = document.getElementById(x);
+        let y = document.getElementById(x);
         t1out.innerHTML = "Hello,".concat(" ", y.value);
     }
 setInterval(function() { sayhello("name") }, 200);
@@ -88,15 +88,27 @@ function strlen_no_method(str)
             if(str[i] == undefined) return i;              
         }
 }
-console.log(strlen_no_method("Hello world"));
+//Spaghetti or my attempt at the str.split() method without using any methods
 function strsplit_no_method(str, delimieter)
 {
+    if(str[str.length-1] == delimieter)
+        {
+            let edgecounter = 1;
+            alert("caught ya");  
+            for(let r = str.length - 2; r >= 0; r--)
+                {
+                    if(str[r] != delimieter) break;
+                    edgecounter++;
+                }
+                str = str.substring(0,str.length - edgecounter);
+        }
     let i =0;
     const ret_array = [];
     checkpart(str,delimieter, ret_array, i);
     return ret_array;
     
 }
+//recursive spaghetti
 function checkpart(str, delimieter, ret_array, i)
 {
     let temp = "";
