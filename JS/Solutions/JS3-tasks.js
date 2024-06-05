@@ -81,3 +81,48 @@ function strsplit(example, delimiter)
 }
 setInterval(function() {t8out.innerHTML = strsplit(t8.value, ' ')}, 200)
 //Done!!
+function strlen_no_method(str)
+{
+    for(let i = 0; true; i++)
+        {
+            if(str[i] == undefined) return i;              
+        }
+}
+console.log(strlen_no_method("Hello world"));
+function strsplit_no_method(str, delimieter)
+{
+    let i =0;
+    const ret_array = [];
+    checkpart(str,delimieter, ret_array, i);
+    return ret_array;
+    
+}
+function checkpart(str, delimieter, ret_array, i)
+{
+    let temp = "";
+    console.log(i);
+    while(str[i] != delimieter)
+        {
+            temp = temp.concat("",str[i]);
+            if(str[i + 1] == delimieter ||( i + 1  == str.length)) 
+                {
+                    console.log("reached");
+                    ret_array.push(temp);
+                    temp = "";
+                    if(i + 1 == str.length) 
+                        {
+                            console.log("len reached")
+                            return true;
+                        }
+                    else{
+                        i++;
+                        checkpart(str,delimieter,ret_array,i);
+                    }
+                }
+                i++;
+        console.log("end");
+        }
+}
+let teststr = "hello6world";
+console.log(teststr[5])
+//console.log(strsplit_no_method("Hello6world" , '6'));
