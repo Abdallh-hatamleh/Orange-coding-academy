@@ -74,7 +74,13 @@ const vowels = ['a','e','i','o','u'];
 //Task 7 
 function capitalizefirst(x)
 {
-    let temp = x[0].toUpperCase() + x.slice(1);
+    let xarr = x.split(" ");
+    let temp = "";
+    for(let i =0; i < xarr.length; i++)
+        {    
+         xarr[i] = xarr[i][0].toUpperCase() + xarr[i].slice(1); 
+         temp = temp.concat(" ", xarr[i]);
+        }
     return temp;
 }
 //Task 8

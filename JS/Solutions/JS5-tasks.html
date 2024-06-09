@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,24 +11,109 @@
             width: 100px;
             background-color: aqua;
         }
+
         #mouseEnter {
             height: 20px;
             width: 100px;
-            background-color: red;}
+            background-color: red;
+        }
+        .shiftTo {
+            height: 100px;
+            width: 100px;
+            background-color: black;
+            color: white;
+        }
+        #coloredDiv {
+            border: 1px black solid;
+            height: 200px;
+            width: 200px;
+        }
+        #customContext {
+ background-color: #ffffff;
+ box-shadow: 0 0 20px rgba(37, 40, 42, 0.22);
+ color: #1f194c;
+ width: 10em;
+ padding: 0.8em 0.6em;
+ font-size: 1.3rem;
+ position: fixed;
+ visibility: hidden;
+}
+
+.ContextItem {
+ padding: 0.3em 1.2em;
+}
+
+.ContextItem:hover {
+ background-color: rgba(44, 141, 247, 0.2);
+ cursor: pointer;
+}
+#tooltip {
+    background-color: #c7bc57;
+    width: fit-content;
+    padding: 4px;
+    border-radius: 4px;
+    position: fixed;
+    visibility: hidden;
+    z-index: 2;
+}
     </style>
 </head>
+
 <body>
     <button id="button1">Click me!</button>
     <p id="task2">paragraph</p>
     <div id="DC">Double click</div>
     <div id="mouseEnter">Mouse Enter</div>
-    <script src="./JS5-taks.js"></script>
-    <form action="">
+    <form id="form1">
         <fieldset>
             <legend>Form Submit Prevention</legend>
             <input type="text" id="inp1">
-            <button type="submit" id="subBtn">Submit</button>
+            <input type="submit" id="submitter" value="submit">
         </fieldset>
     </form>
+    <div id="classad">DoubleClick for style!</div>
+    <form id="form2">
+        <fieldset style="display: flex; flex-direction: column; align-items: flex-end; width: 16rem;">
+            <legend>validation</legend>
+            <div>
+                <label for="f2user">Username:</label>
+                <input type="text" id="f2user">
+            </div>
+            <div>
+                <label for="f2pass">Password:</label>
+                <input type="text" id="f2pass">
+            </div>
+            <div>
+                <label for="passchk">Hide password?</label>
+                <input type="checkbox" id="passchk">
+            </div>
+        <input type="submit" value="Submit">
+        <p id="hint"></p>
+        </fieldset>
+        </form>
+        <img src="../../Media/jo-circle-01.png" width="50px" height="50px" alt="">
+        <button id="imgchanger">Change img?</button>
+        <div id="coloredDiv">
+            <input type="color" id="colorChanger">
+        </div>
+        <div style="display: flex; height: 400px; justify-content: space-around; align-items: center; border: 1px solid;">
+            <button id="prev" type="button">Prev</button>
+            <img src="../../Media/cat1.jpeg" alt="Image of a cat" id="catimg" height="300px" width="300px">
+            <button id="next" type="button">Next</button>
+        </div>
+<button id="task16Btn">Add to below div</button>
+<div id="task16">
+
+</div>
+<div id="customContext">
+    <div class="contextItem">option1</div>
+    <div class="contextItem">option2</div>
+    <div class="contextItem">optiob3</div>
+</div>
+<button id="scroll">TOP!</button> <br>
+<a href="https://www.google.com/">click to go to google!</a>
+<div id="tooltip">default text</div>
+    <script src="./JS5-taks.js"></script>
 </body>
+
 </html>
