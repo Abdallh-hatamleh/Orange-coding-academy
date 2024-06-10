@@ -31,9 +31,32 @@
         //task 9
         localStorage.setItem("task91", "item 1"); localStorage.setItem("task92", JSON.stringify(21)); localStorage.setItem("task93", JSON.stringify([1,3,66,93])); 
         console.log(localStorage.getItem("task91")); console.log(JSON.parse(localStorage.getItem("task92"))); console.log(JSON.parse(localStorage.getItem("task93")));
-        //Session storage tasks
         //task 10
-        sessionStorage.setItem("task10", "Hello World!"); console.log(sessionStorage.getItem("task10"));
+        localStorage.task91 = "item 1.5"; console.log(localStorage.getItem("task91"))
+        //Session storage tasks
+        console.log("session tasks from here");
+        //task 11
+        sessionStorage.setItem("task11", "Hello World!"); console.log(sessionStorage.getItem("task11"));
+        //task 12
+        sessionStorage.setItem("task2",JSON.stringify(123)); console.log(JSON.parse(sessionStorage.getItem("task2")));
+        //task 13
+        sessionStorage.setItem("task3",JSON.stringify(true)); console.log(JSON.parse( sessionStorage.getItem("task3")));
+        //task 14
+        sessionStorage.removeItem("task2");
+        //task 15
+        sessionStorage.clear();
+        //task 16 
+        if(sessionStorage.task1) console.log("task 1 exists");
+        //task 17
+        sessionStorage.setItem("task7",JSON.stringify([1,2,3])); console.log(JSON.parse(sessionStorage.getItem("task7")));
+        //task 18
+        let task18Obj = {val1: "value 1", name: "nam", number: 123};
+        sessionStorage.setItem("task8", JSON.stringify(task18Obj)); console.log(JSON.parse(sessionStorage.getItem("task8")));
+        //task 19
+        sessionStorage.setItem("task91", "item 1"); sessionStorage.setItem("task92", JSON.stringify(21)); sessionStorage.setItem("task93", JSON.stringify([1,3,66,93])); 
+        console.log(sessionStorage.getItem("task91")); console.log(JSON.parse(sessionStorage.getItem("task92"))); console.log(JSON.parse(sessionStorage.getItem("task93")));
+        //task 20
+        sessionStorage.task91 = "item 1.5"; console.log(sessionStorage.getItem("task91"))
     </script>
 </body>
 </html>
