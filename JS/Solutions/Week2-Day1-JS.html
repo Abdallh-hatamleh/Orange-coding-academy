@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+        //task 1
+        localStorage.setItem("task1","Hello World!"); console.log(localStorage.getItem("task1"));
+        //task 2
+        localStorage.setItem("task2",JSON.stringify(123)); console.log(JSON.parse(localStorage.getItem("task2")));
+        //task 3
+        localStorage.setItem("task3",JSON.stringify(true)); console.log(JSON.parse( localStorage.getItem("task3")));
+        //task 4
+        localStorage.removeItem("task2");
+        //task 5
+        localStorage.clear();
+        //task 6 
+        if(localStorage.task1) console.log("task 1 exists");
+        //task 7
+        localStorage.setItem("task7",JSON.stringify([1,2,3])); console.log(JSON.parse(localStorage.getItem("task7")));
+        //task 8
+        let task8Obj = {val1: "value 1", name: "nam", number: 123};
+        localStorage.setItem("task8", JSON.stringify(task8Obj)); console.log(JSON.parse(localStorage.getItem("task8")));
+        //task 9
+        localStorage.setItem("task91", "item 1"); localStorage.setItem("task92", JSON.stringify(21)); localStorage.setItem("task93", JSON.stringify([1,3,66,93])); 
+        console.log(localStorage.getItem("task91")); console.log(JSON.parse(localStorage.getItem("task92"))); console.log(JSON.parse(localStorage.getItem("task93")));
+        //Session storage tasks
+        //task 10
+        sessionStorage.setItem("task10", "Hello World!"); console.log(sessionStorage.getItem("task10"));
+    </script>
+</body>
+</html>
