@@ -17,20 +17,289 @@
         // console.log(testarr.filter((i) => i > 10))
 
         //3
-        let stringarr = ["hello","hi","welome","goodbye"]
+        let stringarr = ["hello","hi","welcome","goodbye"]
         // stringarr.forEach((i) => console.log(i.toUpperCase()))
 
         //4
-        let objarr = [{name: "abdallh", age: 24, nationality: "jordanian"}, {name: "ahmad", age: 42, nationality: "jordanian"}, {name: "jamal", age: 14, nationality: "egyptian"}, {name: "khaled", age: 31, nationality: "syrian"}]
+        let objarr = [{name: "abdallh", age: 24, nationality: "jordanian", score: 6}, {name: "ahmad", age: 42, nationality: "jordanian", score: 3}, {name: "jamal", age: 14, nationality: "egyptian", score: 8}, {name: "khaled", age: 31, nationality: "syrian", score: 2}]
         // console.log(objarr.map((i) => {return i["nationality"]}))
 
         //5
         //console.log(objarr.filter((i) => i["nationality"] == "jordanian"));
 
         //6
-        testarr.forEach((i) => 
-    {
+        let sum = 0;
+        testarr.forEach((i) => {sum += i})
+        //console.log(sum )
+
+        //7
+        function reversestring(x)
+        {
+            let temp = ""
+            let o = 0;
+            for(let i = x.length - 1; i >=0;i--)
+            {
+                temp =temp + x[i];
+                o++;
+            }
+            return temp;
+        }
+        // console.log(stringarr.map(reversestring))
+
+        //8
+        function checkprime(x)
+        {
+            for(let i = x-1; i > 1; i--)
+            {
+                if(x%i == 0) return false;
+            }
+            return true;
+        }
+        // console.log(testarr.filter(checkprime))
+        
+        //9
+        let boolarr = [true,false,false,true,true];
+        // boolarr.forEach((i)=>console.log(i))
+
+        //10
+        // console.log(testarr.map((i)=> String(i)))
+
+        //11
+        let duparr = [1,1,1,2,33,33,3,4,4,5,5];
+        function isunique(val,ind,arr)
+        {
+            return arr.indexOf(val) == ind;
+        }
+        // console.log(duparr.filter(isunique))
+
+        //12
+        // objarr.forEach((obj) => {for(i in obj) {console.log(obj[i])}})
+
+        //13
+        // console.log(stringarr.map((v,i)=> v.concat("",i)))
+
+        //14
+        // console.log(testarr.filter((i) => i%2 ==0))
+
+        //15
+        // testarr.forEach((i)=> {console.log(i*2)})
+
+        //16
+        // console.log(testarr.map((val,ind)=> val + ind))
+        
+        //17
+        // console.log(objarr.filter((i) => i["score"] > 5));
+        
+        //18
+        // stringarr.forEach((s)=> {console.log(s.length)})
+
+        //19
+        function capitalize(str)
+        {
+            return str[0].toUpperCase() + str.slice(1);
+        }
+        // console.log(stringarr.map(capitalize))
+
+        //20
+        let testavg;
+        testavg = (testarr.reduce((acc,v)=> acc += v ) /testarr.length)
+        // console.log(testarr.filter( (val)=> val >testavg ))
+
+        //21
+        // testarr.forEach((val)=>{console.log(val/2)})
+
+        //22
+        function absolute(n)
+        {
+            if(n < 0) return n*-1;
+            else return n;
+        }
+        // testarr.push(-3);
+        // console.log(testarr.map(absolute))
+
+        //23
+        // testarr.push(null)
+        // console.log(testarr.filter((x)=>  x != null))
+
+        //24
+        function checkA(x)
+        {
+            for(let i =0; i < x.length; i++)
+            {
+                if(x[i] == 'a') return 1;
+            }
+            return 0;
+        }
+        // let aCounter = 0;
+        // stringarr.push("hallo")
+        // stringarr.forEach((x)=>{aCounter += checkA(x)});
+        // console.log(aCounter)
+
+        //25
+        objarr.push({name: "nezar", age: 24})
+        
+        //26
+        function getMaxArr(arr)
+        {
+            let temp = arr[0];
+            for(let i = 1; i < arr.length; i++)
+            {
+                if(arr[i] > temp) temp = arr[i];
+            }
+            return temp;
+        }
+        function getMaxSquareNum(arr)
+        {
+            let maxInTest = getMaxArr(arr);
+            let temparr = []
+            for(let i = 0; (i-1)**2 < maxInTest; i++)
+            {
+                temparr.push(i**2);
+            }
+            return temparr;
+        }
+        let testarrMaxSquares = getMaxSquareNum(testarr);
+        let newarr = testarr.filter((v)=> {
+            for(let i=0;i<testarrMaxSquares.length; i++) 
+            { if(v == testarrMaxSquares[i]) return true
+
+            } return false})
+        // console.log(newarr);
+
+        //27
+        let stringobjarr = [];
+        stringarr.forEach((n) =>
+            {
+                stringobjarr.push({text: n, length: n.length});
+            })    
+
+        //28
+        // console.log(stringarr.flatMap((n)=> [n,n]))    
+
+        //29
+        function findMedian(arr) {  
+    arr.sort((a, b) => a - b);  
+    const middleIndex = Math.floor(arr.length / 2);  
+  
+    if (arr.length % 2 === 0) {  
+        return (arr[middleIndex - 1] + arr[middleIndex]) / 2;  
+    } else {  
+        return arr[middleIndex];  
+    }  
+}
+    let median = findMedian(testarr);
+    // console.log(testarr.filter((n) => n < median))
+
+        //30
+    let sqrtarr = [];
+    testarr.forEach((n) => {
+        sqrtarr.push(Math.sqrt(n))
     })
+
+        //31
+    //     console.log(objarr.map((n) => 
+    // {
+    //     n.newprop = "exists";
+    //     return n;
+    // }))
+
+        //32
+        let truthyFalsyArr = [1,0,-0,false,true,"hello",""];
+        // console.log(truthyFalsyArr.filter((n) => n))
+
+        //33
+        function factorial(num)
+        {   
+            if (num < 0) 
+        return -1;
+    
+  // If the number is 0, its factorial is 1.
+  else if (num == 0) 
+      return 1;
+    
+  // Otherwise, call the recursive procedure again
+    else {
+        return (num * factorial(num - 1));
+    }
+        }
+
+        // testarr.forEach((n) => {
+        //     console.log(factorial(n))
+        // })
+
+        //34
+        function Task34(funcy)
+        {
+            funcy("called by task34");
+        }
+        // Task34(logger);
+
+        //35
+        function doforeach(funcy,arr)
+        {
+            for(let i=0; i<arr.length;i++)
+            {
+                funcy(arr[i]);
+            }
+        }
+        // doforeach(logger,testarr);
+        //36
+
+        function task36(inp)
+        {
+            return function() {
+                return inp*5;
+            }
+        }
+        //37
+        function task37(val,funcypos,funcyneg)
+        {
+            if(val < 0) return funcyneg(val);
+            return funcypos(val);
+        }
+
+        //38
+        function mapfromwish(funcy,arr)
+        {
+            let temp = [];
+            for(let i=0; i<arr.length;i++)
+            {
+                temp.push(funcy(arr[i]))
+            }
+            return temp;
+        }
+
+        //39
+        function task39(funcy,x)
+        {
+            console.log(funcy(x));
+            console.log(funcy(x));
+            
+        }
+        //40
+        function task40(num,funcy)
+        {
+            return function(number)
+            {
+                let acc = number
+                for(let i =0; i < num; i++)
+                {
+                    acc = funcy(acc)
+                }
+                return acc;
+            }
+        }
+        function logger(x)
+        {
+            console.log(x)
+        }
+        function exponential(x)
+        {
+            return x*x;
+        }
+        const logitfivetimes = task40(5,logger)
+        // logitfivetimes(12);
+        const expfivetimes = task40(5,exponential)
     </script>
 </body>
 </html>
