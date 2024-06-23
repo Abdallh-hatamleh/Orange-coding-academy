@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+    <script>
+        class Car{
+            make;
+            model;
+            startCar(){
+                console.log("car has started");
+            }
+            constructor(param1,param2) {
+            this.make = param1;
+            this.model = param2;
+            }
+        }
+
+        class ElectricCar extends Car{
+            battery_size;
+        }
+
+        class Account{
+            #balance;
+            deposit(x){
+                this.#balance += x;
+            }
+            withdraw(x){
+                this.#balance -= x;
+            }
+            set balance(x){
+                if(typeof(x) !== Number) throw new Error("balance cannot be anything but a number");
+                else this.#balance = x;
+                console.log("balance edited directly through setter");
+            }
+            get balance(){
+                return this.#balance;
+            }
+        }
+        const car1 = new Car();
+        car1.make = "ford";
+        car1.model = "fusion";
+        const car2 = new Car("toyota", "camry")
+
+
+    </script>
+</body>
+</html>
