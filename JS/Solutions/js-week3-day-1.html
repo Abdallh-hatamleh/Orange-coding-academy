@@ -37,12 +37,12 @@
             withdraw(x){
                 this.#balance -= x;
             }
-            set balance(x){
-                if(typeof(x) !== Number) throw new Error("balance cannot be anything but a number");
+            set lance(x){
+                if(typeof(x) != "number") throw new Error("balance cannot be anything but a number");
                 else this.#balance = x;
                 console.log("balance edited directly through setter");
             }
-            get balance(){
+            get lance(){
                 return this.#balance;
             }
         }
