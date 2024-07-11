@@ -29,5 +29,101 @@ function isAllLower($str)
     }
     return "all lower";
 }
-echo isAllLower("hiIii");
+
+function swap(&$str1, &$str2)
+{
+    $temp = $str1;
+    $str1 = $str2;
+    $str2 = $temp;
+}
+// $x = 1;
+// $y = 10;
+// swap($x, $y);
+// echo "X: $x , Y: $y";
+function armstrong($val)
+{
+    $arr = strval($val);
+    $temp = 0;
+    for ($i = 0; $i < strlen($arr); $i++) {
+        $temp += ($arr[$i] ** 3);
+    }
+    return $temp == $val;
+}
+function palindrome($str)
+{
+    return strtolower($str) == strrev(strtolower($str));
+}
+
+function removedupes(&$arr)
+{
+    $temp = [];
+    foreach ($arr as $value) {
+        if(!in_array($value, $temp)) $temp[] = $value;
+    }
+    $arr = $temp;
+}
+// $idk = [1,2,3,3,3,1,2,5,7];
+// removedupes($idk);
+// print_r($idk)
+//FUNCTIONS END
+function loop1()
+{
+    for ($i = 1; $i < 11; $i++)
+{
+    echo $i;
+    if($i +1< 11) echo "-";
+}
+}
+function loop2()
+{
+    $acc = 0;
+    for ($i = 0; $i < 30; $i++) 
+    {
+        $acc += $i;
+    }
+    echo $acc;
+}   
+function loop3()
+{
+    for ($i = 0; $i < 5; $i++)
+    {
+        for ($j = 0; $j < 5; $j++)
+        {
+            echo "*";
+            if(($j + 1 < 5)) echo "  ";
+        }
+        echo "<br>";
+    }
+}
+function loop4(int $num) 
+{
+    $temp = $num;
+    for ($i = $num -1 ; $i > 0; $i--)
+    {
+        $temp *= $i;
+    }
+    return $temp;
+}
+function loop5(int $num)
+{
+    $temp = [0,1];
+    while(count($temp) <= $num)
+    {
+        $new = 0;
+        for($i = count($temp) - 1; $i > count($temp) - 3; $i--)
+        {
+            $new += $temp[$i];
+        }
+        $temp[] = $new;
+    }
+    return $temp;
+}
+// $variable = loop5(20);
+// foreach ($variable as $value) {
+//     echo $value . " ,";
+// }
+function loop6(int $num)
+{
+    
+}
 ?>
