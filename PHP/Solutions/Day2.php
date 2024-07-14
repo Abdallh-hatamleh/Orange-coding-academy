@@ -296,14 +296,55 @@ function str15($str)
         if($str[$i] != "-") $temp .= $str[$i];
         else
         {
+            $othertemp = $temp;
             for ($j = $i; $j < strlen($str); $j++)
             {
-                if(($str[$j + 1] == "-") || ($j + 1) == strlen($str) ) 
+                if(($str[$j] == "-")) $othertemp .=  $str[$j];
+                else 
+                {
+                    $othertemp .= $str[$j];
+                    $temp = $othertemp;
+                    $i = $j;
+                    break;
+                }
+                if($j +1 == strlen($str)) return $temp;
+                
             }
         }
     }
+    return $temp;
 }
-// echo str15("hello-----");
+function str16($str) {
+    $regsymb = "~[^0-9]~" ;
+    $str = preg_replace($regsymb, " ", $str);
+    return $str;
+}
+function str17($str) {
+    $counter = 0;
+    $temp = "";
+    for( $i = 0; ($i < strlen($str)) && $counter < 5; $i++ )
+    {
+        $temp .= $str[$i];
+        if ( $str[$i] == " " ) $counter++;
+    }
+    return $temp;
+}
+function str18() {
+foreach (range('a', 'z') as $ch)
+{
+    echo $ch . ", ";
+}
+}
+function str19($str) {
+    $str = str_replace(",","", $str);
+    return $str;
+}
+//Mixed 19 and 18
+// echo str19("12351,123,1231.2");
+// str18();
+// echo str17("hello hi hiii hello idk asdasdf asdfasdv asudfas");
+// echo str16("123s3$#@%@!@2");
+// echo str15("hello-----g");
 // echo str14("the quick brown fox jumps over the lazy dog", "fox");
 // echo str13(20002.225102);
 // echo str12("the brown fox","quick","the","brown");
@@ -311,4 +352,3 @@ function str15($str)
 // var_dump( str10("twinkle twinkle little star"));
 // echo str9("hello","hellos");
 // echo str8("hello world idk");
-?>
